@@ -1,0 +1,42 @@
+{
+  "name": "india-state-news-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive India state map with state-specific news from the last 30 days.",
+  "scripts": {
+    "dev": "concurrently -k -n client,server -c cyan,magenta \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "vite build",
+    "start": "node --import tsx server/index.ts"
+  },
+  "keywords": [
+    "india",
+    "map",
+    "news",
+    "states"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "date-fns": "^4.3.0",
+    "express": "^5.2.1",
+    "fast-xml-parser": "^5.8.0",
+    "india-map-svg": "^1.1.4",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^10.0.0",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
+  }
+}
