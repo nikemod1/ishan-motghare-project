@@ -52,6 +52,15 @@ The app runs the client on port 5173 and the API on port 3001.
 - If the news panel is empty, try another state; RSS availability can vary by region and day.
 - If ports 5173 or 3001 are busy, stop the conflicting process and run the app again.
 
+## Usage Tips
+
+- Start with Maharashtra if you want a dense news feed for quick testing.
+- Use the map click, not hover, to switch the selected state.
+- Wait for the news panel to refresh after each click; the app re-queries the server for the new state.
+- If a story looks off-topic, it is usually because the RSS source mentioned a city keyword more strongly than the state name.
+- Use the browser back button only after the page is fully loaded so you do not interrupt the active news request.
+- Keep the app on a stable network connection because the server depends on external RSS feeds.
+
 ## Run in Production
 
 ```bash
