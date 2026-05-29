@@ -28,7 +28,16 @@ npm install
 npm run dev
 ```
 
-The app runs the client on port 5173 and the API on port 3001.
+The app runs the client on port 5173 and the API on port 3001. Note: if port `5173` is in use Vite will pick the next available port (e.g. `5174`). You can force the client to `5173` by setting the `PORT` environment variable before running dev.
+
+### New in this repo
+
+- Theme: neo‑brutalist UI with blue accents (see `src/styles.css`).
+- Added two island territories so all states/territories are selectable on the map:
+	- `Andaman and Nicobar Islands` (ID: `AN`, capital: Port Blair)
+	- `Lakshadweep` (ID: `LD`, capital: Kavaratti)
+
+These entries live in `src/data/stateProfiles.ts` and are included in the map lookup and news search keywords.
 
 ## How It Works
 
