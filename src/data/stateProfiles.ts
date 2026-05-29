@@ -57,8 +57,10 @@ export const stateProfiles: StateProfile[] = [
   { id: 'UP', mapId: toMapId('Uttar Pradesh'), name: 'Uttar Pradesh', capital: 'Lucknow', region: 'North', keywords: ['Kanpur', 'Varanasi', 'Prayagraj'] },
   { id: 'UK', mapId: toMapId('Uttarakhand'), name: 'Uttarakhand', capital: 'Dehradun', region: 'North', keywords: ['Haridwar', 'Rishikesh', 'Haldwani'] },
   { id: 'WB', mapId: toMapId('West Bengal'), name: 'West Bengal', capital: 'Kolkata', region: 'East', keywords: ['Howrah', 'Siliguri', 'Durgapur'] },
-  { id: 'AN', mapId: toMapId('Andaman and Nicobar Islands'), name: 'Andaman and Nicobar Islands', capital: 'Port Blair', region: 'East', keywords: ['Port Blair', 'Neil Island', 'Havelock'] },
-  { id: 'LD', mapId: toMapId('Lakshadweep'), name: 'Lakshadweep', capital: 'Kavaratti', region: 'South', keywords: ['Kavaratti', 'Agatti', 'Minicoy'] },
+  // SVG uses `andaman_and_nicobar` id for the islands path — use explicit mapId to match the SVG.
+  { id: 'AN', mapId: 'andaman_and_nicobar', name: 'Andaman and Nicobar Islands', capital: 'Port Blair', region: 'East', keywords: ['Port Blair', 'Neil Island', 'Havelock'] },
+  // Lakshadweep is represented as a small unnamed/UT path in the SVG (ut_unknown2). Map to that id so it is selectable.
+  { id: 'LD', mapId: 'ut_unknown2', name: 'Lakshadweep', capital: 'Kavaratti', region: 'South', keywords: ['Kavaratti', 'Agatti', 'Minicoy'] },
 ];
 
 const stateById = new Map(stateProfiles.map((profile) => [profile.id, profile]));
