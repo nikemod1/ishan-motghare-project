@@ -4,10 +4,10 @@
 :root {
   --bg: #F7F7F8;
   --surface: #FFFFFF;
-  --muted: #6B6F76;
-  --text: #111213;
+  --muted: #4b5563; /* darker muted for better contrast */
+  --text: #0f1724; /* stronger text color */
   --accent: #0071e3;
-  --accent-strong: rgba(0,113,227,0.14);
+  --accent-strong: rgba(0,113,227,0.16);
   --radius: 12px;
   --glass: rgba(255,255,255,0.8);
   --shadow-sm: 0 6px 18px rgba(17,18,19,0.06);
@@ -244,13 +244,13 @@ body::after {
 
 .legend-item.current,
 .updated-pill {
-  background: var(--blue-soft, rgba(124,156,245,0.12));
-  border-color: rgba(124,156,245,0.18);
+  background: rgba(0,113,227,0.08);
+  border-color: rgba(0,113,227,0.12);
 }
 
 .legend-item.default {
-  background: rgba(167,216,222,0.08);
-  border-color: rgba(167,216,222,0.18);
+  background: rgba(99,102,241,0.04);
+  border-color: rgba(99,102,241,0.06);
 }
 
 .map-frame {
@@ -354,11 +354,12 @@ body::after {
   margin: 10px 0 8px;
   font-size: 1.04rem;
   line-height: 1.45;
+  color: var(--text);
 }
 
 .news-item p {
   margin: 0;
-  color: var(--muted);
+  color: rgba(15,23,42,0.7);
   line-height: 1.65;
 }
 
@@ -372,7 +373,9 @@ body::after {
 .news-tags span {
   border-radius: 999px;
   padding: 6px 10px;
-  color: #e8f2ff;
+  background: rgba(0,113,227,0.08);
+  color: #0056b8;
+  border: 1px solid rgba(0,113,227,0.12);
   font-size: 0.8rem;
 }
 
