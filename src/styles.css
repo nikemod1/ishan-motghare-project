@@ -6,8 +6,12 @@
   --surface: #f4f4f4;
   --text: #0b0b0b;
   --muted: #2b2b2b;
-  --accent: #ff3b30;
-  --accent-2: #00c7e6;
+  /* blues: deep, mid, light */
+  --blue-deep: #0546a0;   /* primary deep blue */
+  --blue-mid:  #0a66ff;   /* interactive / primary accent */
+  --blue-light:#8fd6ff;   /* soft highlights */
+  --accent: var(--blue-mid);
+  --accent-2: var(--blue-light);
   --border-color: #0b0b0b;
   --border-thick: 4px;
   --radius: 6px;
@@ -26,8 +30,8 @@ body {
 
 /* geometric background accents */
 body::before, body::after { content: ''; position: fixed; pointer-events: none; z-index: 0; }
-body::before { inset: -10% -20% 60% -20%; background: linear-gradient(135deg, var(--accent) 0%, transparent 40%); opacity: 0.08; }
-body::after  { inset: 60% -10% -20% 20%; background: linear-gradient(90deg, var(--accent-2) 0%, transparent 40%); opacity: 0.06; }
+body::before { inset: -10% -20% 60% -20%; background: linear-gradient(135deg, var(--blue-deep) 0%, transparent 40%); opacity: 0.08; }
+body::after  { inset: 60% -10% -20% 20%; background: linear-gradient(90deg, var(--blue-light) 0%, transparent 40%); opacity: 0.06; }
 
 .app-shell { width: min(var(--container), calc(100% - 48px)); margin: 0 auto; padding: 36px 0; position: relative; z-index:1; }
 
@@ -78,7 +82,7 @@ body::after  { inset: 60% -10% -20% 20%; background: linear-gradient(90deg, var(
 .skeleton { border-radius:6px; height:14px; background:linear-gradient(90deg,#e6e6e6,#dddddd); }
 
 /* Utilities */
-a { color: var(--border-color); font-weight:800; text-decoration:none; }
+a { color: var(--accent); font-weight:800; text-decoration:none; }
 
 /* Responsive */
 @media (max-width:900px) { .hero{ grid-template-columns: 1fr; } .app-shell{ padding:20px 12px; } }
